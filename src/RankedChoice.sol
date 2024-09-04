@@ -38,7 +38,7 @@ contract RankedChoice is EIP712 {
     //////////////////////////////////////////////////////////////*/
     constructor(address[] memory voters) EIP712("RankedChoice", "1") {
         VOTERS = voters;
-        i_presidentalDuration = block.timestamp;
+        i_presidentalDuration = 1460 days;
         s_currentPresident = msg.sender;
         s_voteNumber = 0;
     }
