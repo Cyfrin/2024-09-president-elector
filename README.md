@@ -1,8 +1,15 @@
-# Ranked Choice
+# President Elector
+
+### Prize Pool TO BE FILLED OUT BY CYFRIN
+
+- Starts: September 12, 2024 Noon UTC
+- Ends: September 19, 2024 Noon UTC
 
 - nSLOC: 140
 
-# About
+[//]: # (contest-details-open)
+
+## About the Project
 
 With a US election coming up, we started thinking about elections and how... well they suck. Most governments follow a "1 person 1 vote" style voting, which ultimately [leads to a 2 party system](https://www.youtube.com/watch?v=qf7ws2DF-zk). So, for our project, we decided to implement a ranked choice on-chain voting mechanism! 
 
@@ -22,6 +29,16 @@ Ranked choice voting is where candidates rank their choices, as opposed to votin
 
 ![alt text](img/ranked-choice-visualization.gif)
 > Gif from [ballotpedia](https://ballotpedia.org/Ranked-choice_voting_(RCV))
+
+## Actors
+
+- Voters: Users who can vote for president. They are identified at construction time.
+- Candidates: Users who received at least 1 vote.
+- President: The current winner of the ranked choice algorithm. 
+
+[//]: # (contest-details-close)
+
+[//]: # (getting-started-open)
 
 # Getting Started 
 
@@ -51,6 +68,10 @@ forge build
 forge test
 ```
 
+[//]: # (getting-started-close)
+
+[//]: # (scope-open)
+
 # Scope
 
 ```
@@ -67,14 +88,14 @@ forge test
 - Tokens:
     - None
 
-# Actors
+[//]: # (scope-close)
 
-- Voters: Users who can vote for president. They are identified at construction time.
-- Candidates: Users who received at least 1 vote.
-- President: The current winner of the ranked choice algorithm. 
+[//]: # (known-issues-open)
 
 # Known Issues
 
 - In `_selectPresidentRecursive` there is an issue where if two candidates are tied, whoever was earlier in the list is dropped. This is known, and we are OK with it.
 - There are other issues with this style of voting, like for example, in some cases a candidate who does worse will win. You can see a [longer explainer here.](https://www.youtube.com/watch?v=qf7ws2DF-zk)
 - We know that `1460 days` is not exactly 4 years. We are OK with that.
+
+[//]: # (known-issues-close)
